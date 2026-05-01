@@ -1,6 +1,7 @@
 # AlgoPulse
 
 AlgoPulse is a small, polished algorithm visualizer built with plain HTML, CSS, and JavaScript.
+I made this website for fun after seeing algorithm animations online and wanting to build my own version.
 
 It includes three interactive modes:
 
