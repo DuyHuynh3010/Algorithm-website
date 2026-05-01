@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AlgoPulse</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="app-title">
+        <div class="hero-copy">
+          <p class="eyebrow">CS41 algorithm cockpit</p>
+          <h1 id="app-title">AlgoPulse</h1>
+          <p class="lede">
+            A visual playground for sorting, shortest paths, and hash table collisions.
+          </p>
+        </div>
+        <div class="system-panel" aria-label="Run summary">
+          <div>
+            <span class="metric-value" id="metric-comparisons">0</span>
+            <span class="metric-label">comparisons</span>
+          </div>
+          <div>
+            <span class="metric-value" id="metric-swaps">0</span>
+            <span class="metric-label">moves</span>
+          </div>
+          <div>
+            <span class="metric-value" id="metric-status">Ready</span>
+            <span class="metric-label">engine</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Algorithm workbench">
+        <aside class="sidebar" aria-label="Algorithm modes">
+          <button class="mode-button active" type="button" data-mode="sort" title="Sorting visualizer">
+            <span class="icon">▥</span>
+            Sort
+          </button>
+          <button class="mode-button" type="button" data-mode="path" title="Pathfinding visualizer">
+            <span class="icon">⌖</span>
+            Path
+          </button>
+          <button class="mode-button" type="button" data-mode="hash" title="Hash table visualizer">
+            <span class="icon">#</span>
+            Hash
+          </button>
+        </aside>
+
+        <section class="stage" aria-live="polite">
+          <div class="stage-header">
+            <div>
+              <p class="eyebrow" id="mode-kicker">Bubble sort</p>
+              <h2 id="mode-title">Watch data organize itself</h2>
+            </div>
+            <div class="controls">
+              <button class="icon-button" type="button" id="shuffle-button" title="Shuffle or rebuild">↻</button>
+              <button class="primary-button" type="button" id="run-button">Run</button>
+            </div>
+          </div>
+
+          <div class="visual sort-visual active" id="sort-visual" aria-label="Sorting bars"></div>
+          <div class="visual path-visual" id="path-visual" aria-label="Pathfinding grid"></div>
+          <div class="visual hash-visual" id="hash-visual" aria-label="Hash table buckets"></div>
+        </section>
+
+        <aside class="detail-panel" aria-label="Algorithm details">
+          <div class="detail-block">
+            <h3>Signal</h3>
+            <p id="signal-text">
+              Bubble sort repeatedly compares adjacent values and pushes larger values to the right.
+            </p>
+          </div>
+          <div class="detail-block">
+            <h3>Complexity</h3>
+            <div class="complexity-grid">
+              <span>Time</span>
+              <strong id="time-complexity">O(n²)</strong>
+              <span>Space</span>
+              <strong id="space-complexity">O(1)</strong>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h3>Trace</h3>
+            <ol class="trace-list" id="trace-list"></ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
